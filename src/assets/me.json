@@ -1,0 +1,13 @@
+{
+    "nombre": "Nayara Bastida Rodríguez",
+    "profesion": "Estudiante de GCFS DAW",
+    "bio": "Joven entusiasta de la informática, con interés en diversas áreas del sector, buscando aprender y desarrollar habilidades en programación, redes y tecnología.",
+    "experiencia": [
+        {
+            "nombre": "Fibergy Networks",
+            "descripcion": "Periodo de FCT del grado medio",
+            "fecha": "Abril 2024 - Junio 2024"
+        }
+    ],
+    "habilidades": ["Conocimientos básicos en Java, HTML, JSON, XML...", "Redes y montaje", "Trabajo en equipo", "Adaptabilidad", "Servicios en Red"]
+}
