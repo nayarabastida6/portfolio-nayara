@@ -1,34 +1,59 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+interface Project {
+	title: string
+	description: string
+}
+
 const { default: meData } = await import('../assets/me.json')
+const projects = await Astro.glob<Project>("../pages/projects/*.md")
+console.log(projects)
 ---
 
 <Layout>
-	
+	<Header />
+	<Footer />
+
+	<section class="presentacion">
+    	<h1 class="nombre">{meData.nombre}</h1>
+    	<p class="profesion">{meData.profesion}</p>
+    	<p class="bio">{meData.bio}</p>
+	</section>  
+
 	<section>
-	<h1>{meData.nombre}</h1>
-	<p>{meData.profesion}</p>
-	<p>{meData.bio}</p>
+		<h2>Proyectos</h2>
+		{projects.map((project) => (
+			<a href={project.url} class="enlace-proyecto">
+				<article class="proyecto">
+					<h3>{project.frontmatter.title}</h3>
+					<p>{project.frontmatter.description}</p>
+				</article>
+			</a>
+		))}
 	</section>
 
 	<section>
-	<h2>Experiencia</h2>
-	{meData.experiencia.map((exp) => (
-		<p>{exp.nombre}</p>
-		<p>{exp.descripcion}</p>
-		<p>{exp.fecha}</p>
-	))}
+    	<h2>Experiencia</h2>
+		    {meData.experiencia.map((exp) => (
+		        <article class="experiencia">
+    		    	<p class="experiencia-nombre">{exp.nombre}</p>
+        			<p class="eperiencia-drescripcion">{exp.descripcion}</p>
+        			<p class="eperiencia-fecha">{exp.fecha}</p>
+	        	</article>
+    	    ))}    
 	</section>
 	
-	<section>
-	<h2>Habilidades</h2>
-	{meData.habilidades.map((habilidad) => ( 
-		<p>{habilidad}</p>
-	))}
-	</section>
+	<div class="envoltura-habilidades">
+		{meData.habilidades.map((habilidad) => (
+			<article class="habilidad">
+				<p>{habilidad}</p>
+			</article>
+		))}
+	</div> 
+</section>
 
 </Layout>

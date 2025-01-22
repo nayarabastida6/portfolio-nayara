@@ -1,4 +1,106 @@
-section {
-    max-width: 200px;
-    margin: 0 auto;
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 170, 0);
 }
+
+section {
+    max-width: 900px;
+    margin-top: 84px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 32px;
+    background-color: black;
+    color: white;
+    height: fit-content;
+    border-radius: 32px;
+  }
+
+  .presentacion h1 {
+    margin: 0px;
+    text-align: center;
+  }
+
+  .presentacion p {
+    margin: 0px;
+    text-align: center;
+  }
+
+  .nombre {
+    font-size: 80px;
+    line-height: 100%;
+  }
+
+
+  .profesion{
+    font-size: 32px;
+    line-height: 120%;
+  }
+
+  .bio{
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 150%;
+    text-align: justify;
+  }
+
+  .enlace-proyecto {
+    text-decoration: none;
+    color: black;
+  }
+
+  .enlace-proyecto:hover {
+    color: blueviolet;
+    background-color: darkgrey;
+  } 
+
+  .proyecto {
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+
+  .experiencia {
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    margin-bottom: 16px;
+  }
+  .exp-nombre {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .exp-descripcion {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .exp-fecha {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(115, 115, 115);
+  }
+
+  .habilidad {
+    width: fit-content;
+    padding: 8px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 8px;
+  }
+  .habilidad p {
+    width: fit-content;
+    margin: 8px;
+  }
+
+  .envoltura-habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }

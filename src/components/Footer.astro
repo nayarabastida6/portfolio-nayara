@@ -1,0 +1,47 @@
+---
+import Instagram from "./icons/Instagram.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import GitHub from "./icons/GitHub.astro";
+---
+
+<footer>
+    Portfolio de Nayara
+    <nav>
+        <ul>
+            <li><a href="https://www.instagram.com/">Instagram</a></li>
+            <li><a href="https://es.linkedin.com/">Linkedin</a></li>
+            <li><a href="https://github.com/nayarabastida6">GitHub</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<style>
+    footer {
+        margin-top: 84px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        width: fit-content;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+</style>
