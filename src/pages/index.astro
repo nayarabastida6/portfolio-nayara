@@ -17,26 +17,29 @@ console.log(projects)
 <Layout>
 	<Header />
 	<Footer />
-
-	<section class="presentacion">
-    	<h1 class="nombre">{meData.nombre}</h1>
-    	<p class="profesion">{meData.profesion}</p>
-    	<p class="bio">{meData.bio}</p>
-	</section>  
-
-	<section>
-		<h2>Proyectos</h2>
-		{projects.map((project) => (
-			<a href={project.url} class="enlace-proyecto">
-				<article class="proyecto">
-					<h3>{project.frontmatter.title}</h3>
-					<p>{project.frontmatter.description}</p>
-				</article>
-			</a>
-		))}
+	<section id="inicio">
+		<section class="presentacion">
+			<h1 class="nombre">{meData.nombre}</h1>
+			<p class="profesion">{meData.profesion}</p>
+			<p class="bio">{meData.bio}</p>
+		</section>  
 	</section>
 
-	<section>
+	<section id="proyectos">
+		<section>
+			<h2>Proyectos</h2>
+			{projects.map((project) => (
+				<a href={project.url} class="enlace-proyecto">
+					<article class="proyecto">
+						<h3>{project.frontmatter.title}</h3>
+						<p>{project.frontmatter.description}</p>
+					</article>
+				</a>
+			))}
+		</section>
+	</section>
+
+	<section id="experiencia">
     	<h2>Experiencia</h2>
 		    {meData.experiencia.map((exp) => (
 		        <article class="experiencia">
@@ -47,13 +50,16 @@ console.log(projects)
     	    ))}    
 	</section>
 	
-	<div class="envoltura-habilidades">
-		{meData.habilidades.map((habilidad) => (
-			<article class="habilidad">
-				<p>{habilidad}</p>
-			</article>
-		))}
-	</div> 
+	<section id="habilidades">
+		<h2>Habilidades</h2>
+		<div class="envoltura-habilidades">
+			{meData.habilidades.map((habilidad) => (
+				<article class="habilidad">
+					<p>{habilidad}</p>
+				</article>
+			))}
+		</div> 
+	</section>
 </section>
 
 </Layout>

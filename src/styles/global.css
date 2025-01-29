@@ -1,6 +1,20 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 170, 0);
+    background: linear-gradient(45deg, #50B3FA, #4F7DFA, #5950FA, #50E9FA, #9050FA);
+    background-size: 400% 400%;
+    animation: gradiente-movimiento 10s ease infinite;
+}
+
+@keyframes gradiente-movimiento {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 section {
@@ -16,7 +30,8 @@ section {
     align-items: center;
     padding: 20px;
     gap: 32px;
-    background-color: black;
+    background-color: #4F7DFA;
+    box-shadow: 0px 2px 20px rgba(255, 255, 255, 0.775);
     color: white;
     height: fit-content;
     border-radius: 32px;
@@ -37,7 +52,6 @@ section {
     line-height: 100%;
   }
 
-
   .profesion{
     font-size: 32px;
     line-height: 120%;
@@ -46,8 +60,15 @@ section {
   .bio{
     font-size: 18px;
     margin-bottom: 16px;
+    font-weight: 300;
     line-height: 150%;
     text-align: justify;
+  }
+
+  h2 {
+    color: white;
+    text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.778);
+    text-align: center;
   }
 
   .enlace-proyecto {
@@ -56,13 +77,13 @@ section {
   }
 
   .enlace-proyecto:hover {
-    color: blueviolet;
-    background-color: darkgrey;
+    color: #4F7DFA;
   } 
 
   .proyecto {
     padding: 16px;
     background-color: white;
+    box-shadow: 3px 5px 5px #000000;
     border-radius: 16px;
     margin-bottom: 16px;
   }
@@ -70,6 +91,7 @@ section {
   .experiencia {
     padding: 16px;
     background-color: white;
+    box-shadow: 3px 5px 5px #000000;
     border-radius: 16px;
     margin-bottom: 16px;
   }
@@ -90,7 +112,8 @@ section {
   .habilidad {
     width: fit-content;
     padding: 8px;
-    background-color: rgb(236, 236, 236);
+    background-color: #E9F4FD;
+    box-shadow: 3px 5px 5px #000000;
     border-radius: 8px;
   }
   .habilidad p {
